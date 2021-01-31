@@ -133,13 +133,13 @@ public final class QueryUtils {
 
                 String section = currentNews.getString("sectionName");
 
-                StringBuilder author = new StringBuilder("By: ");
-
                 String headline = currentNews.getString("webTitle");
 
                 String date = currentNews.getString("webPublicationDate ");
 
                 String url = currentNews.getString("webUrl");
+
+                StringBuilder author = new StringBuilder("By: ");
 
                 JSONArray authorArray = currentNews.getJSONArray("tags");
 
@@ -174,7 +174,7 @@ public final class QueryUtils {
 
     } catch (JSONException e){
 
-            Log.e("QueryUtils", "Something wrong. Problem parsing the Json resuts", e);
+            Log.e("QueryUtils", "Something wrong. Problem parsing the Json results", e);
         }
 
         return news;

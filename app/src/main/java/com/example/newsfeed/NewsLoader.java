@@ -1,7 +1,7 @@
 package com.example.newsfeed;
 
 
-import android.content.AsyncTaskLoader;
+import androidx.loader.content.AsyncTaskLoader;
 import android.content.Context;
 
 import java.util.List;

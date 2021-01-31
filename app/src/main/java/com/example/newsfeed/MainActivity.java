@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.content.AsyncTaskLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity
 
     public static final String LOG_TAG = MainActivity.class.getName();
 
-    private static final String GUARDIAN_REQUEST_URL = "https://content.guardianapis.com/tags?section=world&q=politics&api-key=test";
+    private static final String GUARDIAN_REQUEST_URL = "https://content.guardianapis.com/search?&show-tags=contributor&section=technology&api-key=1205bd93-b6c3-4f90-9eac-eba3ff2c2b02";
 
     private static final int NEWS_LOADER_ID = 1;
 
