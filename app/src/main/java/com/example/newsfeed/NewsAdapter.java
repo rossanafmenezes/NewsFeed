@@ -38,12 +38,15 @@ public class NewsAdapter extends ArrayAdapter<News> {
         //Get the headline (title) from the currentNews object and set this text on the Headline Text view
         headlineTextView.setText(currentNews.getmHeadline());
 
+        //get the author and set it as the text of the author text view
         TextView authorTextView = (TextView) listItemView.findViewById(R.id.author);
         authorTextView.setText(currentNews.getAuthor());
 
+        //get the publication date and set it as the text of the date text view
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
         dateTextView.setText(currentNews.getDate());
 
+        //get the section and set it as the text of the section text view
         TextView sectionTextView = (TextView) listItemView.findViewById(R.id.section);
         sectionTextView.setText(currentNews.getSection());
 

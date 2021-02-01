@@ -116,7 +116,6 @@ public final class QueryUtils {
             return null;
     }
 
-
         List<News> news = new ArrayList<>();
 
         try {
@@ -135,7 +134,7 @@ public final class QueryUtils {
 
                 String headline = currentNews.getString("webTitle");
 
-                String date = currentNews.getString("webPublicationDate ");
+                String date = currentNews.getString("webPublicationDate");
 
                 String url = currentNews.getString("webUrl");
 

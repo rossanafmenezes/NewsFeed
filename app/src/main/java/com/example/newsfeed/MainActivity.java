@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,22 +46,19 @@ public class MainActivity extends AppCompatActivity
         // so the list can be populated in the user interface
         newsFeed.setAdapter(mAdapter);
 
-        newsFeed.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        newsFeed.setOnItemClickListener((adapterView, view, position, l) -> {
 
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                // Find the current article that was clicked on
-                News currentNewsArticle = mAdapter.getItem(position);
+            // Find the current article that was clicked on
+            News currentNewsArticle = mAdapter.getItem(position);
 
-                // Convert the String URL into a URI object (to pass into the Intent constructor)
-                Uri newsUri = Uri.parse(currentNewsArticle.getUrl());
+            // Convert the String URL into a URI object (to pass into the Intent constructor)
+            Uri newsUri = Uri.parse(currentNewsArticle.getUrl());
 
-                // Create a new intent to view the article URI
-                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
+            // Create a new intent to view the article URI
+            Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
 
-                // Send the intent to launch a new activity
-                startActivity(websiteIntent);
-            }
+            // Send the intent to launch a new activity
+            startActivity(websiteIntent);
         });
 
         // Get a reference to the ConnectivityManager to check state of network connectivity
